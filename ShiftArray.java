@@ -9,6 +9,7 @@ public class ShiftArray {
 		// finds an equivalent shift amount. If shift is less
 		// than the size of the array, this expression leaves
 		// shift unchanged:
+
 		shift = shift % arr.length;
 
 		int[] newArray = new int[arr.length];
@@ -17,10 +18,10 @@ public class ShiftArray {
 			int index = (i+shift) % arr.length;
 			newArray[index] = arr[i];
 		}
-
-		arr = newArray;
+		for(int i = 0; i < arr.length; i++){
+			arr[i] = newArray[i];
+		}
 	}
-
 
 	public static void main(String[] args) {
 		try{
